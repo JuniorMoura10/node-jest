@@ -9,7 +9,7 @@ export class UsersController  {
             return response.status(403).json({mensagem:'Impossível criar usuário sem nome válido'});
         }
         database.push(name);
-        return response.status(201).json(`Usuário ${name} criado com sucesso!`);
+        return response.status(201).json({mensagem:`Usuário ${name} criado com sucesso!`});
     }
 
     getUsers (resquest: Request, response: Response): Response {
