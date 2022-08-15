@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { usersController } from './controller/usersController.js';
-import { database } from './database.js';
+import { UsersController } from './controller/usersController';
+import { database } from './database';
 
 const routes = Router();
+const usersController = new UsersController();
 
 routes.get('/users', usersController.getUsers)
 
